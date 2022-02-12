@@ -195,7 +195,10 @@ address {
   color: var(--brand-clr);
 }
 
-.nav-menu li:not(:last-child),
+.nav-menu li:not(:last-child) {
+  margin-right: 50px;
+}
+
 .contacts li:not(:last-child) {
   margin-right: 30px;
 }
