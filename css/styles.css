@@ -73,6 +73,11 @@ address {
   align-items: center;
 }
 
+.link.vertical-orientation {
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .link {
   text-decoration: none;
   display: inline-flex;
@@ -97,6 +102,11 @@ address {
 
 .logo-clr {
   color: var(--brand-clr);
+}
+
+.work img,
+.link img {
+  display: block;
 }
 
 .visually-hidden {
@@ -157,29 +167,6 @@ address {
   padding: 32px 0;
 }
 
-.envelope,
-.smartphone {
-  margin-right: 10px;
-  fill: var(--txt-clr);
-}
-
-.envelope {
-  width: 16px;
-  height: 12px;
-}
-
-.smartphone {
-  width: 10px;
-  height: 16px;
-}
-
-.header-contact:hover .smartphone,
-.header-contact:hover .envelope,
-.header-contact:focus .smartphone,
-.header-contact:focus .envelope {
-  fill: var(--brand-clr);
-}
-
 /* ================== */
 
 .logo-black {
@@ -218,18 +205,24 @@ address {
 }
 
 .contacts li {
-  /* vertical-align: middle; */
   align-items: center;
 }
 
-/* .header-contact::before {
+.envelope,
+.smartphone {
+  margin-right: 10px;
+  fill: var(--txt-clr);
+}
+
+.envelope {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
-  /* background-color: #ff0000; */
-/* content: '';
-  background-image: url(.//images/envelope.svg);
-} */
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+}
 
 /* +++++++++++++++++++++++++++
 
@@ -280,7 +273,7 @@ address {
 /* Соцсети */
 
 .downshift {
-  padding-top: 12px;
+  padding-top: 8px;
 }
 
 .join {
@@ -314,8 +307,6 @@ address {
 /* HERO */
 
 .section-hero {
-  /* background-repeat: no-repeat;
-  background-position: 50%; */
   height: 600px;
   max-width: 1600px;
   margin: 0 auto;
@@ -361,8 +352,7 @@ address {
 }
 
 .benefit-icon-cont {
-  /* background-color: #ecce7b; */
-  background-color: #f5f4fa;
+  background-color: var(--nuance-clr);
   border-radius: 4px;
   margin-bottom: 30px;
   padding: 25px 100px;
@@ -378,10 +368,10 @@ address {
   margin-bottom: 30px;
   content: '';
   height: 120px;
+    background-color: var(--nuance-clr);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70px;
-  background-color: #f5f4fa;
   border-radius: 4px;
 } */
 
@@ -439,11 +429,6 @@ address {
   color: var(--contrast-clr);
 }
 
-.work img,
-.link img {
-  display: block;
-}
-
 /* Члены команды */
 
 .section-team {
@@ -495,11 +480,11 @@ address {
   height: 92px;
   border: 1px solid var(--client-border-clr);
   border-radius: 4px;
-  /* box-sizing: border-box; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .client-logo-cont:not(:last-child) {
   margin-right: 30px;
 }
@@ -603,6 +588,22 @@ a:focus {
   color: var(--brand-clr);
 }
 
+.social-link:hover,
+.social-link:focus,
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--brand-clr);
+}
+
+.client-logo-cont:hover .client-logo-icon,
+.client-logo-link:focus .client-logo-icon,
+.header-contact:hover .smartphone,
+.header-contact:hover .envelope,
+.header-contact:focus .smartphone,
+.header-contact:focus .envelope {
+  fill: var(--brand-clr);
+}
+
 .filter-btn:hover,
 .filter-btn:focus {
   color: var(--white-clr);
@@ -616,14 +617,6 @@ a:focus {
 .projects:hover {
   box-shadow: 0px 4px 4px 0px var(--shadow-clr);
 }
-
-.social-link:hover,
-.social-link:focus,
-.social-link-footer:hover,
-.social-link-footer:focus {
-  background-color: var(--brand-clr);
-}
-
 .social-link:hover .social-icon,
 .social-link:focus .social-icon,
 .social-link-footer:hover .social-icon-footer,
@@ -634,9 +627,4 @@ a:focus {
 .client-logo-cont:hover,
 .client-logo-link:focus {
   border: 1px solid var(--brand-clr);
-}
-
-.client-logo-cont:hover .client-logo-icon,
-.client-logo-link:focus .client-logo-icon {
-  fill: var(--brand-clr);
 }
