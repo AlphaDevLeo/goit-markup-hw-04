@@ -239,7 +239,7 @@ address {
 }
 
 .footer-section .container {
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .logo-white {
@@ -275,9 +275,9 @@ address {
 
 /* Соцсети */
 
-.downshift {
+/* .downshift {
   padding-top: 12px;
-}
+} */
 
 .join {
   margin-bottom: 20px;
